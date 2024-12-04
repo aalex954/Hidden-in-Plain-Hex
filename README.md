@@ -44,11 +44,14 @@ See...or __don't__ ```invisible_string.txt```
 
 ## Solution Overview
 
-The provided sequence consists of Unicode code points within the range of "invisible" or "tag" characters, commonly used for technical or metadata purposes. These characters fall under the Unicode range U+E0000 to U+E007F, a reserved space specifically for tag characters. These are not intended to display as human-readable text and are often ignored by rendering systems, making them an ideal candidate for encoding information discreetly.
+The provided sequence consists of Unicode code points within the range of the [Supplementary Special-purpose Plane](https://codepoints.net/supplementary_special-purpose_plane) or "invisible" / "tag" characters, commonly used for technical or metadata purposes. These characters fall under the Unicode range U+E0000 to U+E007F, a reserved space specifically for tag characters. These are not intended to display as human-readable text and are often ignored by rendering systems, making them an ideal candidate for encoding information discreetly.
+
+
 
 Each code point in the sequence starts with a common prefix (0e00), indicating its membership in this specialized Unicode range. This prefix serves as a structural indicator, while the trailing hexadecimal digits hold the encoded data. When the prefix is stripped, the remaining values correspond directly to ASCII characters, which are the building blocks of readable text.
 
-In this context, the challenge utilizes this obfuscation technique to hide a URL. While the sequence appears meaningless at first glance, its structure provides the key to decoding:
+In this context, the challenge utilizes this obfuscation technique to hide a URL. 
+While the sequence appears meaningless at first glance, its structure provides the key to decoding:
 
 **Pattern Recognition:** Observing the consistent 0e00 prefix hints at a systematic encoding scheme.
 
