@@ -44,11 +44,10 @@ In this context, the challenge utilizes this obfuscation technique to hide a URL
 The solution highlights the need for an analytical approach, where understanding the encoding scheme unlocks the hidden information. 
 This challenge demonstrates how unconventional Unicode ranges, often overlooked due to their technical nature, can be leveraged for creative obfuscation. It also reinforces the importance of familiarity with encoding standards and the ability to apply decoding techniques effectively in security and forensic contexts.
 
+## Solution
 
 <details>
   <summary>Click to reveal full solution</summary>
-
-## Solution
 
 In this variation of the challenge, the invisible string is embedded within a quote, disguised as "blank spaces" between words. 
 These spaces are not ordinary whitespace characters but encoded Unicode "invisible" characters (e.g., tag characters). 
