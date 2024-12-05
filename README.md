@@ -73,8 +73,9 @@ To extract and decode the hidden message, we can use CyberChef, a powerful and u
 
 Here's how:
 
-1. Copy the suspicious text and paste it in to Cyber Chef.
-2. Escape the string to reveal the Unicode.
+1. Identify the suspicious text on the page by testing the text for extra chars, non-standard encoding, or by escaping the string chars.
+2. Copy the suspicious text and paste it in to Cyber Chef.
+3. Escape the string to reveal the Unicode.
 
 ![image](https://github.com/user-attachments/assets/484bd0e1-a6f4-457c-a626-242159ebef08)
 
