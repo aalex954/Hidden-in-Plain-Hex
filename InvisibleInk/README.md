@@ -28,6 +28,65 @@ InvisibleInk is a companion Python script to [aalex954's Hidden-in-Plain-Hex CTF
     pip install -r requirements.txt
     ```
 
+## Help Menu and Command Line Options
+
+InvisibleInk provides a `--help` menu for each command to guide you through its usage. You can access the help menu for the main script and each subcommand to get detailed information about the available options and their usage.
+
+### Main Help Menu
+
+To see the main help menu, run:
+
+```shell
+python3 InvisibleInk.py --help
+```
+
+This will display a list of available commands and their descriptions.
+
+### Subcommand Help Menus
+
+Each subcommand also has its own `--help` menu. For example, to see the help menu for the `encode-hidden` command, run:
+
+```shell
+python3 InvisibleInk.py encode-hidden --help
+```
+
+This will display detailed information about the `encode-hidden` command, including its arguments and usage examples.
+
+Similarly, you can access the help menus for other subcommands:
+
+```shell
+python3 InvisibleInk.py encode-visible-with-hidden --help
+python3 InvisibleInk.py decode-file --help
+```
+
+### Installing Shell Completions
+
+Typer supports shell completions for various shells, making it easier to use the commands. To install shell completions, follow the instructions below for your shell.
+
+#### bash
+
+```bash
+python3 InvisibleInk.py --install-completion bash
+```
+
+#### Zsh
+
+```shell
+python3 InvisibleInk.py --install-completion zsh
+```
+
+#### Fish
+
+```shell
+python3 InvisibleInk.py --install-completion fish
+```
+
+#### PowerShell
+
+```PowerShell
+python3 InvisibleInk.py --install-completion powershell
+```
+
 ## Usage
 
 ### Encode a Hidden String
@@ -35,7 +94,7 @@ InvisibleInk is a companion Python script to [aalex954's Hidden-in-Plain-Hex CTF
 Encode a string into hidden Unicode characters and save it to a file.
 
 ```shell
-python invisibleink.py encode-hidden "your hidden string" hidden_output.txt
+python3 InvisibleInk.py encode-hidden "your hidden string" hidden_output.txt
 ```
 
 ### Encode a Visible String with Hidden Unicode
@@ -43,7 +102,7 @@ python invisibleink.py encode-hidden "your hidden string" hidden_output.txt
 Embed hidden Unicode characters within a visible string and save it to a file.
 
 ```shell
-python invisibleink.py encode-visible-with-hidden "your visible string" "your hidden string" combined_output.txt
+python3 InvisibleInk.py encode-visible-with-hidden "your visible string" "your hidden string" combined_output.txt
 ```
 
 ### Decode a File to Retrieve the Hidden String
@@ -51,8 +110,12 @@ python invisibleink.py encode-visible-with-hidden "your visible string" "your hi
 Extract and decode hidden Unicode characters from a file.
 
 ```shell
-python invisibleink.py decode-file combined_output.txt
+python3 InvisibleInk.py decode-file combined_output.txt
 ```
+
+After running the appropriate command, follow the on-screen instructions to enable shell completions for your shell. This will allow you to use tab completion for commands and options, making it easier to work with InvisibleInk.
+
+By using the `--help` menus and enabling shell completions, you can efficiently navigate and utilize the features of `InvisibleInk.py`.
 
 ## How It Works
 
@@ -97,7 +160,7 @@ python3 InvisibleInk.py encode-visible-with-hidden "This is a test" "hidden" com
 3. Decode a File:
 
 ```shell
-python invisibleink.py decode-file combined_output.txt
+python3 InvisibleInk.py decode-file combined_output.txt
 ```
 
 ### License/Contributions
